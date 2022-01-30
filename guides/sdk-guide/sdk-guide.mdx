@@ -58,7 +58,7 @@ export default function MarketPlace() {
   const market = useMemo(
     () =>
       sdk.getMarketplaceModule("0xf4e8C436d87Bd4cB1416E474948105FdF80BB6A0"),
-    [sdk],
+    [sdk]
   );
 
   // using a method inside our sdk
@@ -166,7 +166,7 @@ const sdk = new ThirdwebSDK(
     // Your wallet private key
     process.env.PRIVATE_KEY as string,
     // This is the RPC URL for Rinkeby
-    ethers.getDefaultProvider("https://rinkeby-light.eth.linkpool.io/"),
-  ),
+    ethers.getDefaultProvider("https://rinkeby-light.eth.linkpool.io/")
+  )
 );
 ```

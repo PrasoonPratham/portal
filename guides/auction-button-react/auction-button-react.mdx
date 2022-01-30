@@ -40,7 +40,7 @@ import { ThirdwebProvider, ConnectWallet } from '@3rdweb/react';
 import './App.css';
 
 //import component for claim button
-import AuctionComponent from './AuctionListing'; 
+import AuctionComponent from './AuctionListing';
 
 const supportedChainIds = [1, 4, 137, 250, 43114, 80001];
 const connectors = {
@@ -178,7 +178,7 @@ The `createAuctionListing` method takes two **prices** as input.
     });
   }, [market, tokenId, tokenIdOffer, tokenIdReservePrice];
 
-  const makeBid = 
+  const makeBid =
     async (listingId) => {
       await market.makeAuctionListingBid({
         listingId: listId,

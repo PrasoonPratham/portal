@@ -99,7 +99,7 @@ const useWalletMembershipAccess = () => {
     read more: <https://docs.ethers.io/v5/api/signer>
     */
     const module = new ThirdwebSDK(signer).getCollectionModule(
-      MEMBERSHIP_NFT_CONTRACT_ADDRESS,
+      MEMBERSHIP_NFT_CONTRACT_ADDRESS
     );
     const balance = await module.balance(MEMBERSHIP_NFT_TOKEN_ID);
     return balance.toNumber() >= 1;

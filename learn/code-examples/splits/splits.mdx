@@ -17,7 +17,7 @@ const deploySplitModule = async () => {
   const splitsModule = await app.deploySplitsModule({
     name: "Splits",
     description: "Splits Module",
-  
+
     // Array of recipients and the shares we want to split with
     // the total number of shares = 5
     // therefore `<RECIPIENT_ADDRESS_1>` will recieve 20% of the royalties
@@ -33,8 +33,8 @@ const deploySplitModule = async () => {
       },
     ],
   });
-  
-  // In order to use a splits module, you must set it as the 
+
+  // In order to use a splits module, you must set it as the
   // recipient when deploying a module
   await app.deployNftModule({
     name: "My NFT",
@@ -43,17 +43,14 @@ const deploySplitModule = async () => {
     // use the address of the splits module as the recipient.
     feeRecipient: splitsModule.address,
   });
-}
+};
 
-deploySplitModule()
+deploySplitModule();
 // `feeRecipient` will be the address of the Splits module
 ```
 
 <MdxNavigation>
-  <MdxNavigationItem
-    href="/portal/learn/code-examples/vote"
-    title="Vote"
-  />
+  <MdxNavigationItem href="/portal/learn/code-examples/vote" title="Vote" />
   <MdxNavigationItem
     href="/portal/learn/code-examples/others"
     title="Others"

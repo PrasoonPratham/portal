@@ -57,9 +57,9 @@ To create our project, we'll need **MATIC** on testnet, if you don't have any, y
 
 ### View your smart contract on the blockchain
 
-The token module that was created deployed a smart contract to the Mumbai blockchain.  To see the actual transaction:
+The token module that was created deployed a smart contract to the Mumbai blockchain. To see the actual transaction:
 
-- Inside the _Test Coin_ token module you will see an address under the name.  Copy this address
+- Inside the _Test Coin_ token module you will see an address under the name. Copy this address
 - Go to the [Mumbai Polygon Scan](https://mumbai.polygonscan.com/) and paste the token module address
 
 You will see your smart contract and under transactions you will see the contract creation transaction.
@@ -116,7 +116,6 @@ npm install @3rdweb/sdk ethers dotenv
 npm install --save-dev typescript @types/node ts-node tslib
 ```
 
-
 ### Import the SDK
 
 ```ts
@@ -125,7 +124,7 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 import { ethers } from "ethers";
 
 //Importing private key
-require('dotenv').config();
+require("dotenv").config();
 ```
 
 We also need to create a .env file with our `PRIVATE_KEY`, you can check how to get your wallet's private key, on [this guide](/portal/guides/create-a-metamask-wallet#export-your-private-key).
@@ -133,6 +132,7 @@ We also need to create a .env file with our `PRIVATE_KEY`, you can check how to 
 Remember that we're gonna mint from _Wallet B_, so you'll need the `PRIVATE_KEY` of that one.
 
 Don't commit this `PRIVATE_KEY` to GitHub or anywhere else, don't use it on Repl.it, you will lose your funds, we recommend to use a Dev wallet instead of your real wallet.
+
 <br />
 
 ```python:.env
@@ -213,13 +213,13 @@ And it's there, 1000 $TEST coins!
 
 ## That's it!
 
-Congratulations! You've deployed smart contracts to the blockchain and integrated it with a mini web3 application. 
+Congratulations! You've deployed smart contracts to the blockchain and integrated it with a mini web3 application.
 
 Do you realize how powerful that is?
 
 The code for everything we've done in this project is in this [GitHub repository](https://github.com/nftlabs/examples/tree/main/typescript/token-minter).
 
-And this only scratching the surface on what thirdweb can do.  Check out our guides on some of the most common web3 workflows:
+And this only scratching the surface on what thirdweb can do. Check out our guides on some of the most common web3 workflows:
 
 - [Mint an NFT Collection with thirdweb TypeScript SDK](/portal/guides/mint-nft-collection-using-typescript-sdk)
 - [Create your own marketplace with thirdweb TypeScript SDK](/portal/guides/create-your-own-marketplace-with-thirdweb-typescript-sdk)

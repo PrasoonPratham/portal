@@ -67,7 +67,7 @@ function MyApp() {
     return Promise.race([
       fetch(url, options),
       new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("timeout")), timeout),
+        setTimeout(() => reject(new Error("timeout")), timeout)
       ),
     ]);
   }
@@ -91,7 +91,7 @@ function MyApp() {
           "Content-type": "application/json; charset=UTF-8",
         },
       },
-      300000,
+      300000
     )
       .then((result) => result.json())
       .then((response) => {

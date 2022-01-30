@@ -28,7 +28,7 @@ const deployPackModule = async () => {
 };
 
 deployPackModule();
-```  
+```
 
 ### Creating a pack
 
@@ -39,7 +39,7 @@ const createPack = async () => {
   try {
     await pack.create({
       assetContract: "<BUNDLE_MODULE_ADDRESS>",
-      // Specify the tokens and their respective quantities you want in the pack. 
+      // Specify the tokens and their respective quantities you want in the pack.
       assets: [
         {
           tokenId: 0,
@@ -55,7 +55,6 @@ const createPack = async () => {
         name: "Pack",
       },
     });
-
   } catch (error) {
     console.log(error);
   }
@@ -63,10 +62,10 @@ const createPack = async () => {
 
 createPack();
 ```
-  
+
 ### Opening a pack
 
-```ts 
+```ts
 const pack = sdk.getPackModule("<MODULE_ADDRESS>");
 
 const openPack = async () => {

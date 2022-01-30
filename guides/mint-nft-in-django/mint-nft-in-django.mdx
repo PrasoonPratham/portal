@@ -18,6 +18,7 @@ In this guide we'll integrate third web's sdk into a Django app by adding a mint
 Check out the GitHub repo [here](https://github.com/razacodespython/nft_creator).
 
 ## Dashboard setup
+
 The first thing we need to do is head over to the [dashboard](/dashboard) and create a project and an **NFT Collection** module. if you don't know how to do this, check out [this guide](/portal/learn/introduction).
 
 Once your module has been created, it's time to mint our first NFT, but we don't need the dashboard for that! I mean we could, but why use GUI if we can use Python!?
@@ -108,7 +109,7 @@ PRIVATE_KEY =1234OUI132UIO5YAZKSJFDGIO
 load_dotenv("./.env")
 PRIVATE_KEY = os.getenv('PRIVATE_KEY')
 
-#over here we connect our wallet via the private key stored in the '.env' file 
+#over here we connect our wallet via the private key stored in the '.env' file
 sdk.set_private_key('PRIVATE_KEY')
 ```
 
@@ -140,21 +141,21 @@ from . import nft_network
 from thirdweb import ThirdwebSdk, SdkOptions, MintArg
 
 def home(request):
-    
+
     file_url = nft_network.nft_module.balance()
-    
+
     if request.method == 'POST' and request.FILES['home']:
         upload = request.FILES['home']
-        
+
         name_nft = "Wing_02"
         description_nft = "My-Wing"
         image_nft = upload.read()
         prop = {}
 
         nft_network.nft_module.mint(MintArg(name=name_nft,description=description_nft,image_uri=image_nft, properties=prop))
-        
+
         return redirect("success")
-     
+
     return render(request, "index.html", {'file_url': file_url})
 
 def success():

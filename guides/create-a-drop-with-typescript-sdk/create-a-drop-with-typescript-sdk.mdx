@@ -28,11 +28,11 @@ Once your **Drop** module has been created, we can go ahead and set the **Claim 
 
 ![Claim conditions](./claim_conditions.png)
 
-In this example we will first pick our currency. To choose the native currency of a chain, leave the default setting, i.e. the 0x000...000.  We set the max price per nft as **0.01** ETH and the max supply 5. Click on **add** to finalise. Your wallet will pop-up to authorise a transaction.
+In this example we will first pick our currency. To choose the native currency of a chain, leave the default setting, i.e. the 0x000...000. We set the max price per nft as **0.01** ETH and the max supply 5. Click on **add** to finalise. Your wallet will pop-up to authorise a transaction.
 
 ![Fill in claim conditions](./claim_conditions2.png)
 
-Go ahead to settings to check your claim conditions. You can see them here. Please note, that if you change your claim conditions, you will have to pay gas fees. 
+Go ahead to settings to check your claim conditions. You can see them here. Please note, that if you change your claim conditions, you will have to pay gas fees.
 
 ![Fill in module settings](./setup.png)
 
@@ -43,7 +43,6 @@ Over here you can also see the max supply you can set for your **Drop**. Please 
 Now it's time to list our first NFT, but we don't need the dashboard for that! I mean we could, but why use GUI if we can use TypeScript!?
 
 ![Start minting an nft](./start_drop.png)
-
 
 ## The code
 
@@ -109,7 +108,7 @@ const sdk = new ThirdwebSDK(
 
 ### 5. Define which module to use
 
-Now we need to define which module we want to use. This is the module we just created inside our project. We called the module **Drop written in TypeScript**. This module has an address. We need to pass the address here. You can find the address here, under **Drop  written in TypeScript**:
+Now we need to define which module we want to use. This is the module we just created inside our project. We called the module **Drop written in TypeScript**. This module has an address. We need to pass the address here. You can find the address here, under **Drop written in TypeScript**:
 
 ![start_drop.png](./start_drop.png)
 
@@ -146,6 +145,7 @@ lazyMintNft();
 ```
 
 So the only thing left is to run our code! Open a terminal and paste the following:
+
 ```bash:virtual-env
 # Runs the typescript file
 npx ts-node index.ts
@@ -154,7 +154,7 @@ npx ts-node index.ts
 
 ### 7. That's it!
 
-Congratulations! You have created your own drop. The NFTs are available to be claimed! You can use the code below to check all your drops! 
+Congratulations! You have created your own drop. The NFTs are available to be claimed! You can use the code below to check all your drops!
 
 ```tsx:index.ts
 //Get all Drops

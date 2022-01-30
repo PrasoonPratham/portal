@@ -19,20 +19,16 @@ const changeRecipient = async () => {
   // Updating the fee recipient requires the use of the app module
   // that the target module is deployed in
   const appModule = sdk.getAppModule("<APP_MODULE_ADDRESS>");
-  await appModule.setModuleRoyaltyTreasury("<MODULE_ADDRESS>", "<NEW_ROYALTY_ADDRESS>");
-}
+  await appModule.setModuleRoyaltyTreasury(
+    "<MODULE_ADDRESS>",
+    "<NEW_ROYALTY_ADDRESS>"
+  );
+};
 
-changeRecipient()
+changeRecipient();
 ```
 
 <MdxNavigation>
-  <MdxNavigationItem
-    href="/portal/learn/code-examples/splits"
-    title="Splits"
-  />
-  <MdxNavigationItem
-    href="/portal/guides"
-    title="Developer Guides"
-    next
-  />
+  <MdxNavigationItem href="/portal/learn/code-examples/splits" title="Splits" />
+  <MdxNavigationItem href="/portal/guides" title="Developer Guides" next />
 </MdxNavigation>

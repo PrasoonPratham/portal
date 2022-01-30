@@ -56,12 +56,12 @@ const mintBatchTokensTo = async () => {
     await token.mintBatchTo([
       {
         address: "<TARGET_ADDRESS_1>",
-        amount
+        amount,
       },
       {
         address: "<TARGET_ADDRESS_2>",
-        amount
-      }
+        amount,
+      },
     ]);
   } catch (err) {
     console.log(err);
